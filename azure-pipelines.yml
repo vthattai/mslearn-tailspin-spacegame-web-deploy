@@ -101,7 +101,7 @@ stages:
             displayName: 'Azure App Service Deploy: website'
             inputs:
               azureSubscription: '$(azureSubscription)'
-              appName: '$(WebAppNameDev)'
+              appName: '$(WebAppDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
 
 - stage: 'Test'
@@ -125,5 +125,5 @@ stages:
             displayName: 'Azure App Service Deploy: website'
             inputs:
               azureSubscription: '$(azureSubscription)'
-              appName: '$(WebAppNameTest)'
+              appName: '$(WebAppTest)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
